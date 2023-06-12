@@ -75,6 +75,16 @@ Estos datos en el flow son vizualizados en el debug que se muestra en la imagen,
 
 ![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/2f6bad98-226b-4367-b922-085f9bf8fa57)
 
+dentro de este mismo flow se conectan auna base de datos para su posterior visualizacion en grfana.
+
+Se manda el dato de tempertura junto a la Id de uno de los integrantes del equpo para verificar la recepcion de los mismo, en una 
+base de datos que se construyo con el nombre: Temperaturas, donde se muestra una cosntante temperatra de 37°C, temperatura adecuada para la incubacion de huevos. tambie se construye un gauch en el dashboar donde se muestra la temperatura que llega al flow en tiempo real.
+
+![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/81f6b094-0363-4b57-aa09-25953f307068)
+
+## Temperatura registrada por NodRed y grafana 
+
+Sensor registrando temperatura de 37.7°C, una temperatura menor a 38 lo cual mantendrá cerrada la tapa de la incubadora y activara los leds para aumentar la temperatura de la incubadora
 
 
 

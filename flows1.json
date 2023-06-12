@@ -1,0 +1,324 @@
+[
+    {
+        "id": "2dbcab4cbb3ea481",
+        "type": "tab",
+        "label": "Temperatura de incubadora",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "093bf27a022b4dda",
+        "type": "mqtt in",
+        "z": "2dbcab4cbb3ea481",
+        "name": "",
+        "topic": "codigoIoT/Mor/mqtt/flow4",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "fc811d2d0501731c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "d2707d5ab10eb307",
+                "1db2cbaf7e72030a",
+                "d9a8ac367f87a3c0"
+            ]
+        ]
+    },
+    {
+        "id": "d2707d5ab10eb307",
+        "type": "json",
+        "z": "2dbcab4cbb3ea481",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 390,
+        "y": 80,
+        "wires": [
+            [
+                "b909fa2f41d12049"
+            ]
+        ]
+    },
+    {
+        "id": "b909fa2f41d12049",
+        "type": "function",
+        "z": "2dbcab4cbb3ea481",
+        "name": "Temperatura",
+        "func": "msg.payload = msg.payload.temp;\nmsg.topic = \"Temperatura\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 80,
+        "wires": [
+            [
+                "1daf2f5ef68c2eca",
+                "d4a228a20822e578"
+            ]
+        ]
+    },
+    {
+        "id": "1daf2f5ef68c2eca",
+        "type": "ui_gauge",
+        "z": "2dbcab4cbb3ea481",
+        "name": "",
+        "group": "aee6740f2204bcb0",
+        "order": 1,
+        "width": 9,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#729fcf",
+            "#fcaf3e",
+            "#ca3838"
+        ],
+        "seg1": "18",
+        "seg2": "26",
+        "className": "",
+        "x": 830,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d9a8ac367f87a3c0",
+        "type": "json",
+        "z": "2dbcab4cbb3ea481",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 390,
+        "y": 280,
+        "wires": [
+            [
+                "4a4d90451ad06953"
+            ]
+        ]
+    },
+    {
+        "id": "dee241c2d362002e",
+        "type": "mysql",
+        "z": "2dbcab4cbb3ea481",
+        "mydb": "80f905d7e9cfe037",
+        "name": "",
+        "x": 790,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a4d90451ad06953",
+        "type": "function",
+        "z": "2dbcab4cbb3ea481",
+        "name": "B.D incubadora",
+        "func": "msg.topic = \"INSERT INTO temp_incubadora (`objeto`,`temperatura`) VALUES ('\" + msg.payload.id + \"',\" + msg.payload.temp +  \");\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 220,
+        "wires": [
+            [
+                "dee241c2d362002e"
+            ]
+        ]
+    },
+    {
+        "id": "f82ceff49bde5742",
+        "type": "ui_template",
+        "z": "2dbcab4cbb3ea481",
+        "group": "48f9c197e7ddc154",
+        "name": "temperatura graficada de incubadora",
+        "order": 1,
+        "width": 12,
+        "height": 7,
+        "format": "<iframe src=\"http://localhost:3000/d-solo/gUQRyxwVz/incubadora?orgId=1&from=1686141400547&to=1686160451217&panelId=2\"\n    width=\"450\" height=\"400\" frameborder=\"0\"></iframe>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 210,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eb0b443ae619a26e",
+        "type": "comment",
+        "z": "2dbcab4cbb3ea481",
+        "name": "MQTT",
+        "info": "",
+        "x": 70,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "1db2cbaf7e72030a",
+        "type": "debug",
+        "z": "2dbcab4cbb3ea481",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "d4a228a20822e578",
+        "type": "ui_chart",
+        "z": "2dbcab4cbb3ea481",
+        "name": "",
+        "group": "ec99d83150f69539",
+        "order": 1,
+        "width": 12,
+        "height": 6,
+        "label": "Grafica",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#729fcf",
+            "#3465a4",
+            "#204a87",
+            "#fcaf3e",
+            "#f57900",
+            "#ce5c00",
+            "#ef2929",
+            "#cc0000",
+            "#a40000"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 840,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "446b0e6d10d9dc09",
+        "type": "ui_spacer",
+        "z": "2dbcab4cbb3ea481",
+        "name": "spacer",
+        "group": "be0e7e7bd10c183b",
+        "order": 1,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "fc811d2d0501731c",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "aee6740f2204bcb0",
+        "type": "ui_group",
+        "name": "Temperatura ",
+        "tab": "0806279e2e8d74f5",
+        "order": 1,
+        "disp": true,
+        "width": 9,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "80f905d7e9cfe037",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "incubadora",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "48f9c197e7ddc154",
+        "type": "ui_group",
+        "name": "Grafica base de datos grafana",
+        "tab": "0806279e2e8d74f5",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ec99d83150f69539",
+        "type": "ui_group",
+        "name": "Historico real",
+        "tab": "0806279e2e8d74f5",
+        "order": 2,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0806279e2e8d74f5",
+        "type": "ui_tab",
+        "name": "Registro de temperatura",
+        "icon": "dashboard",
+        "order": 8,
+        "disabled": false,
+        "hidden": false
+    }
+]

@@ -87,9 +87,21 @@ base de datos que se construyo con el nombre: Temperaturas, donde se muestra una
 
 ![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/81f6b094-0363-4b57-aa09-25953f307068)
 
+
 ## Temperatura registrada por NodRed y grafana 
 
-Sensor registrando temperatura de 37.7°C, una temperatura menor a 38 lo cual mantendrá cerrada la tapa de la incubadora y activara los leds para aumentar la temperatura de la incubadora
+Sensor registrando temperatura de 37.7°C (ver indicador gauch), una temperatura menor a 38 lo cual mantendrá cerrada la tapa de la incubadora y activara los leds para aumentar la temperatura de la incubadora.
+![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/fba2e61d-1d0b-4689-9237-df8f53d657ca)
+![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/8d143927-cf36-47c9-866a-5c2774651236)}
+
+ensor registrando temperatura de 38.4°C, una temperatura mayor a 38 lo cual activara el servomotor para abrir la tapa de la incubadora y activara el ventilador para disminuir la temperatura de la incubadora
+![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/463a078f-88f4-4d5c-b24d-1b8d7b7aa448)
+![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/ef4f3f03-6b2f-48be-87d8-190cecb7ea7b)
+
+
+
+
+
 
 
 

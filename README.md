@@ -63,13 +63,17 @@ El circuito del sistema programado en la tarjeta ESP32-CAM se muestra las conexi
 Para este circuito se utilizó el sensor de temperatura y humedad DHT11, un Servomotor para mover la tapa del contenedor de 0 a 180 grados, un motor de corriente directa (CD), un peotoboard y jumpers Macho-Macho (M-M) para las conexiones.
 Se utilizó el integrado programador FDTI, para subir el código al ESP32-CAM y para su alimentación a 5v del sistema desarrollado.
 
-Una vez emsamblado ambos circuitos estos comparten el valor del sensor del DHT11, que se puentea de un circuito al otro como se muestra en la siguiente imagen:
+Una vez emsamblado ambos circuitos estos comparten el valor del sensor del DHT11, que se puentea de un circuito al otro como se muestra en la siguiente imagen: 
+![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/55d5aff6-12ec-476e-996f-96380f274d11)
 
-![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/a18f178b-efe3-4d67-8e49-5e96905a9926)
-![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/7793c7cd-7d70-4b65-9e5d-9f806fd368fa)
 De manera practica  e ilustrativa el circuito fisico es como se muestra en la segnuda imagen de arriba.
 
+## Flow necesario para la realización del proyecto
 
+Se realizo el siguiente flow el cual recibe los datos que se mandan del esp32-cam mediante el tema: MQTT/MOR/flow4 via  wi-fi.
+Estos datos en el flow son vizualizados en el debug que se muestra en la imagen, se recibe un dato por segundo respectivamente.
+
+![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/2f6bad98-226b-4367-b922-085f9bf8fa57)
 
 
 

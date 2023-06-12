@@ -66,6 +66,9 @@ Se utilizó el integrado programador FDTI, para subir el código al ESP32-CAM y 
 Una vez emsamblado ambos circuitos estos comparten el valor del sensor del DHT11, que se puentea de un circuito al otro como se muestra en la siguiente imagen:
 
 ![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/a18f178b-efe3-4d67-8e49-5e96905a9926)
+![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/7793c7cd-7d70-4b65-9e5d-9f806fd368fa)
+De manera practica  e ilustrativa el circuito fisico es como se muestra en la segnuda imagen de arriba.
+
 
 
 

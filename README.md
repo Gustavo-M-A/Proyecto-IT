@@ -50,3 +50,13 @@ Se muestran los leds dispuestos en serie, y estos actuan de acuerdo a la tempera
 
 ![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/090a863d-1873-461a-b469-3f251e3e4f00)
 
+## Circuito control ESP32-CAM y FTDI
+La temperatura es sensada con la placa ESP32-CAM, el cual registra temperaturas con punto flotante de 0 a 50 grados centígrados, el dato de temperatura obtenido es transmitido tambien a la placa Arduino para regular la témpera de los LEDs que se mencionó anteriormente.​
+ Cuando la temperatura eleva su temperatura a una cantidad inusual de 40 grados el sistema de ventilación se activa para disipar y disminuir los grados dentro del contenedor de incubación, esta disicipacion se logra abriendo la tapa del contenedor y activando un ventilador para refrescar los huevos dentro del nido robótico.
+ 
+ ![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/58541e0c-2526-4fcc-ae98-cd33b31c675c)
+ ![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/5dd65337-2c62-494d-8270-12da75f288c5)
+
+
+
+

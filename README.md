@@ -110,7 +110,8 @@ los datos de temperatura censados son obtenidos y enviados por mqtt conectada a 
 Evidencias
 
 Repositorio github: https://github.com/Gustavo-M-A/Proyecto-IoT/edit/main/README.md
-Minicurso de codigo IoT:
+
+Minicurso de codigo IoT: https://edu.codigoiot.com/course/view.php?id=999
 
 Créditos
 

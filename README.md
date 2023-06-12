@@ -68,6 +68,11 @@ Una vez emsamblado ambos circuitos estos comparten el valor del sensor del DHT11
 
 De manera practica  e ilustrativa el circuito fisico es como se muestra en la segnuda imagen de arriba.
 
+Los circuitos para los circuitos mencionados anteriormente se muestran acontinuacio: 
+![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/85af2701-bd87-4abb-b9bd-9f93f2689dfa)
+
+Los codigos se encuentran dentro de este repositorio con sus  debidas lineas comentadas, la primer imagen de arriiba muestra el  codigo para el circuito de iluminaciòn en la maqueta de incubadora, el segundo muestra el codigo que lleva el control del motor de corriente directa para refrescar el recipiente de incubacion, el sensor de temperatura y el sevomotor para abrir la tapa del contenedor.
+
 ## Flow necesario para la realización del proyecto
 
 Se realizo el siguiente flow el cual recibe los datos que se mandan del esp32-cam mediante el tema: MQTT/MOR/flow4 via  wi-fi.

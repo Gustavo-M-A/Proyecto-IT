@@ -98,6 +98,26 @@ ensor registrando temperatura de 38.4°C, una temperatura mayor a 38 lo cual act
 ![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/463a078f-88f4-4d5c-b24d-1b8d7b7aa448)
 ![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/ef4f3f03-6b2f-48be-87d8-190cecb7ea7b)
 
+Se muestra tambien un historico Local de las temperaturas registradas en la base de datos y que son vizualizadas en Grafana, podemos observar en la siguiente imagen como las temperaturas se mantiene en un rango estable de incubacion oscilantes en los 37°C con pequeñas fluctuaciones en intervalos registrados por el sensor de temp. DHT11.
+
+## Conclusión
+
+Se construyo un prototipo de incubadora de huevos que regula la temperatura dentro del recipiente de incubación, ​
+
+los datos de temperatura censados son obtenidos y enviados por mqtt conectada a una red y enviado por una tema a un objeto flow, donde son visualizados mediante una grafica y Dashboar que muestran la temperatura censada en tiempo real, las temperaturas obtenidas anteriormente son almacenados dentro de una base de datos y visualizados en gráficos de Grafana en un histórico local.
+
+
+Evidencias
+
+Repositorio github: https://github.com/Gustavo-M-A/Proyecto-IoT/edit/main/README.md
+Minicurso de codigo IoT:
+
+Créditos
+
+Desarrollado por:
+Gustavo Medina Ángel
+Daniel Alejandro Rochez Salgado
+
 
 
 

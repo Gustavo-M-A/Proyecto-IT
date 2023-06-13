@@ -100,6 +100,9 @@ ensor registrando temperatura de 38.4°C, una temperatura mayor a 38 lo cual act
 
 Se muestra tambien un historico Local de las temperaturas registradas en la base de datos y que son vizualizadas en Grafana, podemos observar en la siguiente imagen como las temperaturas se mantiene en un rango estable de incubacion oscilantes en los 37°C con pequeñas fluctuaciones en intervalos registrados por el sensor de temp. DHT11.
 
+![image](https://github.com/Gustavo-M-A/Proyecto-IoT/assets/133837622/021d6ceb-378b-49e8-9ae8-794638e0949f)
+
+
 ## Conclusión
 
 Se construyo un prototipo de incubadora de huevos que regula la temperatura dentro del recipiente de incubación, ​
